@@ -4,7 +4,7 @@
 
 ReadMeWords in the name of the app
 
-ReadMeWords is a dictionary that randomly generates popular words used in the English language along with their meanings, an example of how to use the given word and a audio pronunciation for selected words. The purpose of a dictionary is to provide clear, concise definitions and explanations of words, making it an essential tool for language learners, writers, and anyone who needs to communicate effectively.
+ReadMeWords is a dictionary that randomly generates popular traditional and non-traditional words used in the English language along with their meanings, an example of how to use the given word and a audio pronunciation for selected words. The purpose of a dictionary is to provide clear, concise definitions and explanations of words, making it an essential tool for language learners, writers, and anyone who needs to communicate effectively.
 
 API being used https://api.dictionaryapi.dev/api/v2
 
