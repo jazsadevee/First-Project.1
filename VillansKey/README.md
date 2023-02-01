@@ -8,12 +8,13 @@ ReadMeWords is a dictionary that randomly generates popular words used in the En
 
 API being used https://api.dictionaryapi.dev/api/v2
 
+
 Tuesday - Make a outline for Project 1 
 Wednesday - make the code for app and make sure code is working
-Thursday - CSS & HTML
-Friday - debug
-Saturday - 
-Sunday -
+Thursday - build app; each piece is working/ working together cohesively
+Friday - CSS & HTML 
+Saturday - debug; CSS & HTML
+Sunday - finishing touches 
 
 
 Reference URL:
