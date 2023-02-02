@@ -4,6 +4,7 @@ import data from "./data.json" assert { type: "json" };
 
 const wordContainer = document.querySelector('#wordInput')
 const defContainer = document.querySelector('#def')
+//const textExample = document.querySelector('#example')
 
 let randomNumber = Math.floor(Math.random() * 2240) + 1;
 let string = data[randomNumber]
@@ -39,21 +40,26 @@ fetchData()
 //Default word onpage load is Dictionary, definition and sound
 // const word
 
-
+// add phonetics to click function 
+// audio to button function 
+// create "else" + condition to get word then add condition that checks if counter is greater than 0 if so refresh Count = 0 
+// or add refresh button that clears the information from the button function 
 const button = document.querySelector('#word')
 button.addEventListener('click', async (e) => {
+  // main.innerHTML = ''
   randomNum()
   let term = await fetchData()
   console.log(term, 'here');
 
   let wordHolder = document.createElement('p')
   // wordContainer.append(wordHolder)
-
   let definitionHolder = document.createElement('p')
+  //let exampleHolder = document.createElement('p')
 
   wordHolder.textContent = term.word
   definitionHolder.textContent = term.meanings[0].definitions[0].definition
-
+  //exampleHolder.textContent = term.
+  
   wordContainer.append(wordHolder)
   defContainer.append(definitionHolder)
   // console.log(definitionHolder.textContent);
