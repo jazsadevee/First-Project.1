@@ -3,13 +3,21 @@
 import data from "./data.json" assert { type: "json" };
 
 const wordContainer = document.querySelector('#wordInput')
-const randomNumber = Math.floor(Math.random() * 2240) + 1;
+const defContainer = document.querySelector('#def')
+
+let randomNumber = Math.floor(Math.random() * 2240) + 1;
 let string = data[randomNumber]
 console.log(randomNumber);
 console.log(data[randomNumber]);
 console.log(string);
 
-
+function randomNum() {
+  let num = Math.floor(Math.random() * 2240) + 1;
+  console.log(num)
+  randomNumber = num
+  string = data[randomNumber]
+  return randomNumber
+}
 
 // Async fetch function
 async function fetchData() {
@@ -30,13 +38,24 @@ fetchData()
 
 //Default word onpage load is Dictionary, definition and sound
 // const word
+
+
 const button = document.querySelector('#word')
 button.addEventListener('click', async (e) => {
-  let words = await fetchData()
-  console.log(words, 'here');
-  const p = document.createElement('p')
+  randomNum()
+  let term = await fetchData()
+  console.log(term, 'here');
 
-  p.textContent = words.word
+  let wordHolder = document.createElement('p')
+  // wordContainer.append(wordHolder)
 
-  wordContainer.append(p)
+  let definitionHolder = document.createElement('p')
+
+  wordHolder.textContent = term.word
+  definitionHolder.textContent = term.meanings[0].definitions[0].definition
+
+  wordContainer.append(wordHolder)
+  defContainer.append(definitionHolder)
+  // console.log(definitionHolder.textContent);
 })
+console.log(wordContainer);
