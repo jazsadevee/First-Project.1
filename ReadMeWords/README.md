@@ -32,7 +32,7 @@ async function fetchData() {
 fetchData()
 
 
-###WireFrame: 
+### WireFrame: 
 
 <img src="images/WireFrame2.png">
 
@@ -61,12 +61,12 @@ fetchData()
 - **Saturday** - CSS & HTML & debug
 - **Sunday** - finishing touches 
 
-##Priority Matrix
+## Priority Matrix
 
 <img src="images/Priority-Matrix.png">
 
 
-###Reference URL:
+### Reference URL:
 
   1. https://wtools.io/convert-list-to-json-array
   2. https://github.com/first20hours/google-10000-english
