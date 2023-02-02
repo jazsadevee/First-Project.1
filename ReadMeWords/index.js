@@ -4,7 +4,8 @@ import data from "./data.json" assert { type: "json" };
 
 const wordContainer = document.querySelector('#wordInput')
 const defContainer = document.querySelector('#def')
-//const textExample = document.querySelector('#example')
+const exampleContainer = document.querySelector('#example')
+const audioContainer = document.querySelector('#audio')
 
 let randomNumber = Math.floor(Math.random() * 2240) + 1;
 let string = data[randomNumber]
@@ -46,22 +47,27 @@ fetchData()
 // or add refresh button that clears the information from the button function 
 const button = document.querySelector('#word')
 button.addEventListener('click', async (e) => {
-  // main.innerHTML = ''
   randomNum()
   let term = await fetchData()
   console.log(term, 'here');
-
-  let wordHolder = document.createElement('p')
+  
   // wordContainer.append(wordHolder)
+  let wordHolder = document.createElement('p')
   let definitionHolder = document.createElement('p')
-  //let exampleHolder = document.createElement('p')
-
+  let exampleHolder = document.createElement('p')
+  let audioHolder = document.createElement('p')
+  
+  // main.innerHTML = ''
+  
   wordHolder.textContent = term.word
   definitionHolder.textContent = term.meanings[0].definitions[0].definition
-  //exampleHolder.textContent = term.
+  exampleHolder.textContent = term.meanings[0].definitions[0].example
+  audioHolder.textContent = term.phonetics[0].audio
   
   wordContainer.append(wordHolder)
   defContainer.append(definitionHolder)
+  exampleContainer.append(exampleHolder)
+  audioContainer.append(audioHolder)
   // console.log(definitionHolder.textContent);
 })
 console.log(wordContainer);
