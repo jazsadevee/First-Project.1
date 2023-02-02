@@ -15,7 +15,6 @@ https://api.dictionaryapi.dev/api/v2
 ### API Snippet:
 
 // Async fetch function
-
 async function fetchData() {
     const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en"
     //   // Write code here.
