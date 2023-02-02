@@ -63,7 +63,7 @@ fetchData()
 
 ##Priority Matrix
 
-<img src="images/Priority-Matrix.png">
+<img src="images/Priority Matrix.png">
 
 
 ###Reference URL:
