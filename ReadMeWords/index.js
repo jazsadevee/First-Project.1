@@ -97,7 +97,7 @@ button.addEventListener('click', async (e) => {
   wordHolder.textContent = term.word
   definitionHolder.textContent = term.meanings[0].definitions[0].definition
   exampleHolder.textContent = term.meanings[0].definitions[0].example
-  audioHolder.textContent = term.phonetics[0].audio
+  // audioHolder.textContent = term.phonetics[0].audio
   
   wordContainer.append(wordHolder)
   defContainer.append(definitionHolder)
@@ -115,12 +115,15 @@ console.log(wordContainer);
 // }
 // console.log(term(true));
 
-function term() {
-  if (definition == true) {
+function termm(term) {
+  if (term == true) {
+    return true
+  } else {
+    console.log("Press Again");
+  } if (definition == true) {
     return true
   } else {
     console.log("No Definition at this time");
   }
-
   console.log(term);
 }
