@@ -4,12 +4,16 @@
 }
 
 #logo {
-  height: 50px;
-  width: 50px;
+  height: 250px;
+  width: 250px;
   box-sizing: border-box;
   background-position: center;
-  
-  /* background-position: center; */
-  /* background-image: "https://unsplash.com/photos/HH4WBGNyltc.png"; */
-  /* background-position: "no"; */
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+

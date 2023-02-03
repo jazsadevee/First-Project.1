@@ -26,13 +26,6 @@ console.log(string);
 // console.log(data[arr2]);
 // console.log(string2);
 
-// const newArr = randomNumber.concat(arr2);
-// console.log(newArr);
-
-// async function renderSelect() {
-//   const  = 
-// }
-
 function randomNum() {
   let num = Math.floor(Math.random() * combined.length) + 1;
   console.log(num)
@@ -99,6 +92,7 @@ button.addEventListener('click', async (e) => {
 
   // main.innerHTML = ''
 
+  debugger
   wordHolder.textContent = term.word
   definitionHolder.textContent = term.meanings[0].definitions[0].definition
   exampleHolder.textContent = `"${term.meanings[0].definitions[0].example}"`
