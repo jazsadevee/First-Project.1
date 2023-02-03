@@ -1,3 +1,19 @@
-p {
-  background-color: rgb(201, 144, 255);
+* {
+  font-family: 'Noto Serif Ahom', serif;
+  font-size: 20px;
 }
+
+#logo {
+  height: 250px;
+  width: 250px;
+  box-sizing: border-box;
+  background-position: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
