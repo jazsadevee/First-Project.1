@@ -9,8 +9,8 @@ const combined = [...data, ...arr2]
 const wordContainer = document.querySelector('#wordInput')
 const defContainer = document.querySelector('#def')
 const exampleContainer = document.querySelector('#example')
-const audioContainer = document.querySelector('#audio')
-
+// const audioContainer = document.querySelector('#audio')
+const phoneticContainer = document.querySelector('#pronounce')
 
 // arr1 words
 let randomNumber = Math.floor(Math.random() * combined.length) + 1;
@@ -93,20 +93,23 @@ button.addEventListener('click', async (e) => {
   let wordHolder = document.querySelector('#wordHolder')
   let definitionHolder = document.querySelector('#definition')
   let exampleHolder = document.querySelector('#ex')
-  let audioHolder = document.querySelector('#sound')
+  // let audioHolder = document.querySelector('#sound')
+  let phoneticHolder = document.querySelector('#pronunciation')
 
 
   // main.innerHTML = ''
 
   wordHolder.textContent = term.word
   definitionHolder.textContent = term.meanings[0].definitions[0].definition
-  exampleHolder.textContent = term.meanings[0].definitions[0].example
+  exampleHolder.textContent = `"${term.meanings[0].definitions[0].example}"`
   // audioHolder.textContent = term.phonetics[0].audio
+  phoneticHolder.textContent = `"${term.phonetic}"`
 
   wordContainer.append(wordHolder)
   defContainer.append(definitionHolder)
   exampleContainer.append(exampleHolder)
-  audioContainer.append(audioHolder)
+  phoneticContainer.append(phoneticHolder)
+  // audioContainer.append(audioHolder)
   // console.log(definitionHolder.textContent);
 })
 console.log(wordContainer);
