@@ -3,3 +3,13 @@
   font-size: 20px;
 }
 
+#logo {
+  height: 50px;
+  width: 50px;
+  box-sizing: border-box;
+  background-position: center;
+  
+  /* background-position: center; */
+  /* background-image: "https://unsplash.com/photos/HH4WBGNyltc.png"; */
+  /* background-position: "no"; */
+}
