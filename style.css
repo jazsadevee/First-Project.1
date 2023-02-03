@@ -17,3 +17,18 @@
   flex-direction: column;
 }
 
+#wordInput {
+  border: 5px solid gray;
+  border-radius: 20px;
+  margin: auto;
+}
+
+#example {
+border: 5px solid gray;
+border-radius: 20px;
+}
+
+#pronounce {
+border: 5px solid gray;
+border-radius: 20px;
+}
