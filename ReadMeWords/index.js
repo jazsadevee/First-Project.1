@@ -107,6 +107,15 @@ button.addEventListener('click', async (e) => {
 })
 console.log(wordContainer);
 
+const audioBtn = document.querySelector('#audio')
+button.addEventListener('click', async (e) => {
+  (e.target.value)
+  let newAudio = await fetchData(url)
+  console.log(newAudio);
+});
+console.log(audioBtn);
+  
+
 //create a conditional operator, after choosing a word if the definition doesn't generate set a new condition telling the app if definition has nothing attached (0 strings) then choosen another word (loop over that array?)
 // if audio doesn't have a sound leave a statement saying no sound 
 
