@@ -11,6 +11,7 @@ const defContainer = document.querySelector('#def')
 const exampleContainer = document.querySelector('#example')
 const audioContainer = document.querySelector('#audio')
 
+
 // arr1 words
 let randomNumber = Math.floor(Math.random() * combined.length) + 1;
 let string = data[randomNumber]
@@ -42,18 +43,20 @@ function randomNum() {
 
 // Async fetch function
 async function fetchData() {
-    const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en"
-    //   // Write code here.
-    try {
-      const res = await fetch(`${BASE_URL}/${string}`)
-      const json = await res.json()
-      console.log('fetch     ', combined);
-      return json[0] 
-      }
-    catch {
-      console.log("error");
-    }
+  const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en"
+  //   // Write code here.
+  try {
+    const res = await fetch(`${BASE_URL}/${string}`)
+    const json = await res.json()
+    console.log('fetch     ', combined);
+    console.log(json);
+    // mistakes(json[0].word);
+    return json[0]
   }
+  catch {
+    console.log("error");
+  }
+}
 
 fetchData()
 
@@ -86,19 +89,20 @@ button.addEventListener('click', async (e) => {
   let term = await fetchData()
   // (e.target.value)
   console.log(term, 'here');
-  
+
   let wordHolder = document.querySelector('#wordHolder')
   let definitionHolder = document.querySelector('#definition')
   let exampleHolder = document.querySelector('#ex')
   let audioHolder = document.querySelector('#sound')
-  
+
+
   // main.innerHTML = ''
-  
+
   wordHolder.textContent = term.word
   definitionHolder.textContent = term.meanings[0].definitions[0].definition
   exampleHolder.textContent = term.meanings[0].definitions[0].example
   // audioHolder.textContent = term.phonetics[0].audio
-  
+
   wordContainer.append(wordHolder)
   defContainer.append(definitionHolder)
   exampleContainer.append(exampleHolder)
@@ -107,14 +111,16 @@ button.addEventListener('click', async (e) => {
 })
 console.log(wordContainer);
 
-const audioBtn = document.querySelector('#audio')
-button.addEventListener('click', async (e) => {
-  (e.target.value)
-  let newAudio = await fetchData(url)
-  console.log(newAudio);
-});
-console.log(audioBtn);
-  
+// const audioBtn = document.querySelector('#audio')
+// button.addEventListener('click', async (e) => {
+//   console.log("audio bttn");
+//   (e.target.value)
+//   let newAudio = await fetchData(url)
+//   console.log(newAudio);
+//   newAudio.play();
+// });
+// console.log(audioBtn);
+
 
 //create a conditional operator, after choosing a word if the definition doesn't generate set a new condition telling the app if definition has nothing attached (0 strings) then choosen another word (loop over that array?)
 // if audio doesn't have a sound leave a statement saying no sound 
@@ -124,7 +130,7 @@ console.log(audioBtn);
 // }
 // console.log(term(true));
 
-function termm(term) {
+function mistakes(term) {
   if (term == true) {
     return true
   } else {
@@ -135,4 +141,10 @@ function termm(term) {
     console.log("No Definition at this time");
   }
   console.log(term);
+  if (audioBtn == true) {
+    return true
+  } else {
+    console.log("No Pronunciation");
+  }
+
 }
